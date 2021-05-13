@@ -1,0 +1,38 @@
+h1 {
+  font-size: 65px;
+  color: orange;
+  font-family: sans-serif;
+}
+
+ul {
+  background-color: orchid;
+  line-height: 20px;
+}
+
+.Cor-fundo-p-ul {
+  background-color: purple;
+}
+
+p {
+  font-weight: 600;
+  font-size: 3em;
+}
+
+body {
+  font-size: 16px;
+  text-align: center;
+  font-style: italic;
+  text-decoration:underline; 
+}
+
+#a {
+  background-color: yellow;
+}
+
+#v {
+  background-color: red;
+}
+
+#m {
+  background-color: brown;
+}
