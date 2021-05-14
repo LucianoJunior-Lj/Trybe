@@ -1,0 +1,16 @@
+h1, p{
+  text-align: center;
+}
+
+li:hover{
+  background-color: burlywood;
+}
+
+li:active{
+  font-family:sans-serif;
+}
+
+ul, ol{
+  list-style: none;
+  max-width: 300px;
+}
