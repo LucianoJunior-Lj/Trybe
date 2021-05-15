@@ -1,0 +1,51 @@
+h3{
+  color: black;
+}
+div:hover {
+  border: 5px solid black;
+}
+
+div:nth-of-type(1){
+  background-color: #0E0B16;
+  color:white;
+}
+
+div:nth-of-type(2){
+  background-color: #A239CA;
+}
+
+div:nth-of-type(3){
+  background-color: #4717F6;
+}
+
+div:nth-of-type(4){
+  background-color: #1f0431;
+}
+
+div:nth-of-type(5){
+  background-color: #E7DFDD;
+}
+
+div:nth-of-type(1) h3{
+  color: white;
+  font-style: italic;
+}
+
+div:nth-of-type(2) h3{
+  color: black;
+}
+
+div:nth-of-type(3) h3{
+  color: pink;
+  padding: 10px;
+  font-style: italic;
+}
+
+div:nth-of-type(4) h3{
+  color: powderblue;
+}
+
+div:nth-of-type(5) h3{
+  color:darkblue;
+  font-style: italic;
+}
