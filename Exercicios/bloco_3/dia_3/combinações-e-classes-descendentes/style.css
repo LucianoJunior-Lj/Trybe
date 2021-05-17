@@ -1,0 +1,64 @@
+ol{
+  background-color: rgb(255, 102, 0);
+}
+
+ol li:nth-of-type(odd){
+  color: green;
+}
+
+ol li:nth-of-type(even){
+  text-transform: uppercase;
+}
+
+h1, h3{
+  color: red;
+}
+
+h1 em, h3 em{
+  border: 1px black solid;
+  font-size: 40px;
+}
+
+li{
+  font-size: 20px;
+}
+
+li em{
+  font-weight: bold;
+}
+
+.lpo li:nth-of-type(1), .lpo li:nth-of-type(2), .lpo li:nth-of-type(3){
+  color: blue;
+}
+
+.lpo li:nth-of-type(2), .lpo li:nth-of-type(3){
+  background-color: pink;
+}
+
+a{
+  text-decoration: none;
+}
+
+.aliados li:hover{
+  font-weight: bold;
+}
+
+.aliados li:nth-of-type(1) :hover{
+  background-color: orangered;
+}
+
+.aliados li:nth-of-type(2) :hover{
+  background-color: green;
+}
+
+.aliados li:nth-of-type(3) :hover{
+  background-color: black;
+}
+
+.aliados li:nth-of-type(4) :hover{
+  background-color: yellow;
+}
+
+.aliados li:nth-of-type(5) :hover{
+  background-color: green;
+}
