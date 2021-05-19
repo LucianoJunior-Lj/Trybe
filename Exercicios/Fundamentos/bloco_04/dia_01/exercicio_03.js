@@ -1,6 +1,6 @@
 let numero1 = 5;
 let numero2 = 92;
-let numero3 = 20
+let numero3 = 20;
 
 function retornaMaiorNumero(numero1, numero2, numero3){
   if(numero1 > numero2 && numero1 > numero3){
