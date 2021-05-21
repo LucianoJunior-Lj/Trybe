@@ -1,11 +1,9 @@
 let n = 5;
 
-let asteriscos = '*';
+let asteriscos;
 
-for (let index = 0; index < n; index++) {
-  if (index > 0) {
-    asteriscos += '*' ;
-  }
+for (let index = 1; index <= n; index += 1) {
+  asteriscos = '*'.repeat(index);
 
   console.log(asteriscos);
   
