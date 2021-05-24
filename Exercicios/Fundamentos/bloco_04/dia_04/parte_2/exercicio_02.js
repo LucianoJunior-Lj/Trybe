@@ -1,6 +1,6 @@
 let array = [2, 3, 6, 7, 10, 1];
 
-function getIndexHighestValue(array) {
+function getHighestValueIndex(array) {
   let highestValue = array[0];
   let indexArray = 0;
   
@@ -14,4 +14,4 @@ function getIndexHighestValue(array) {
   return indexArray;
 }
 
-console.log('O índice do maior valor do array ' + array + ' é: ' + getIndexHighestValue(array));
+console.log('O índice do maior valor do array ' + array + ' é: ' + getHighestValueIndex(array));
