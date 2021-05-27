@@ -68,11 +68,12 @@
           element.innerHTML = text;
         }
         
-        document.getElementsByTagName(father)[0].appendChild(element);
+        document.querySelector(father).appendChild(element);
       }
       
       createElement('h1', false, 'body', 'Exercício 5.2 - JavaScript DOM');
       createElement('div', 'main-content', 'body', false);
+      createElement('div', 'center-content', '.main-content', false);
       
     </script>
   </body>
