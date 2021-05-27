@@ -74,6 +74,14 @@
         
         document.querySelector(father).appendChild(element);
       }
+
+      function createList() {
+        let numberInFull = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+        for (let key of numberInFull) {
+          createElement('li', false, 'ul', key, false);
+        }
+      }
+
       //Exercicio 1.1
       createElement('h1', false, 'body', 'Exercício 5.2 - JavaScript DOM', false);
       //Exercicio 1.2
@@ -88,6 +96,9 @@
       createElement('div', 'rigth-content', '.main-content', false, false);
       //Exercicio 1.7
       createElement('img', 'small-image', '.left-content', false, 'https://picsum.photos/200');
+      //Exercicio 1.8
+      createElement('ul', false, '.rigth-content', false, false);
+      createList();
       
     </script>
   </body>
