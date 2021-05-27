@@ -75,10 +75,18 @@
         document.querySelector(father).appendChild(element);
       }
 
+      //função para o Exercicio 1.8
       function createList() {
         let numberInFull = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
         for (let key of numberInFull) {
           createElement('li', false, 'ul', key, false);
+        }
+      }
+
+      //função para o Exercicio 1.9
+      function createH3() {
+        for (let index = 0; index < 3; index += 1) {
+          createElement('h3', false, '.main-content', 'teste' + index, false)          
         }
       }
 
@@ -99,6 +107,9 @@
       //Exercicio 1.8
       createElement('ul', false, '.rigth-content', false, false);
       createList();
+      //Exercicio 1.9
+      createH3();
+      
       
     </script>
   </body>
