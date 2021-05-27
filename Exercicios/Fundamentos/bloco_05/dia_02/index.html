@@ -58,15 +58,21 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-      function createElementWithText(tag, text, father) {
+      function createElement(tag, nameClass, father, text) {
         let element = document.createElement(tag);
-        element.innerHTML = text;
-        element.style.color = 'blue';
+        if (nameClass) {
+          element.className = nameClass;
+        }
 
+        if (text) {
+          element.innerHTML = text;
+        }
+        
         document.getElementsByTagName(father)[0].appendChild(element);
       }
       
-      createElementWithText('h1', 'Exercício 5.2 - JavaScript DOM', 'body');
+      createElement('h1', false, 'body', 'Exercício 5.2 - JavaScript DOM');
+      createElement('div', 'main-content', 'body', false);
       
     </script>
   </body>
