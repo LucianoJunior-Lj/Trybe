@@ -100,6 +100,12 @@
         document.querySelectorAll(tag)[index].classList.add('title');
       }
 
+      //Função para o exercicio 2.3
+      function removeElement(father, child) {
+        child = document.getElementsByClassName(child)[0]
+        document.querySelector(father).removeChild(child);
+      }
+
       //Exercicio 1.1
       createElement('h1', false, 'body', 'Exercício 5.2 - JavaScript DOM', false);
       //Exercicio 1.2
@@ -123,6 +129,8 @@
       addClass('h1', 'title', 0);
       //Exercicio 2.2
       worksWithH3('add', 'description');
+      //Exercicio 2.3
+      removeElement('.main-content','left-content');
       
     </script>
   </body>
