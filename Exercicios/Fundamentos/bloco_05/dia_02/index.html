@@ -57,7 +57,7 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+      // Função para os exercicios de 1.1 a 1.9
       function createElement(tag, nameClass, father, text, src) {
         let element = document.createElement(tag);
         if (nameClass) {
@@ -83,11 +83,21 @@
         }
       }
 
-      //função para o Exercicio 1.9
-      function createH3() {
+      //função para o Exercicio 1.9 e 2.2
+      function worksWithH3(choice, nameClass) {
         for (let index = 0; index < 3; index += 1) {
-          createElement('h3', false, '.main-content', 'teste' + index, false)          
+          if (choice === 'create') {
+            createElement('h3', false, '.main-content', 'teste' + index, false);
+          }
+          else if (choice === 'add') {
+            addClass('h3', nameClass, index);
+          }   
         }
+      }
+
+      //função para o exercicio 2.1 e 2.2
+      function addClass(tag, nameClass, index) {
+        document.querySelectorAll(tag)[index].classList.add('title');
       }
 
       //Exercicio 1.1
@@ -101,15 +111,18 @@
       //Exercicio 1.5
       createElement('div', 'left-content', '.main-content', false, false);
       //Exercicio 1.6
-      createElement('div', 'rigth-content', '.main-content', false, false);
+      createElement('div', 'right-content', '.main-content', false, false);
       //Exercicio 1.7
       createElement('img', 'small-image', '.left-content', false, 'https://picsum.photos/200');
       //Exercicio 1.8
-      createElement('ul', false, '.rigth-content', false, false);
+      createElement('ul', false, '.right-content', false, false);
       createList();
       //Exercicio 1.9
-      createH3();
-      
+      worksWithH3('create', false);
+      //Exercicio 2.1
+      addClass('h1', 'title', 0);
+      //Exercicio 2.2
+      worksWithH3('add', 'description');
       
     </script>
   </body>
