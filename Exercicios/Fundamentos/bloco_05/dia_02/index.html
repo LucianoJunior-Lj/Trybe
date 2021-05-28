@@ -102,7 +102,7 @@
 
       //Função para o exercicio 2.3
       function removeElement(father, child) {
-        child = document.getElementsByClassName(child)[0]
+        child = document.getElementsByClassName(child)[0];
         document.querySelector(father).removeChild(child);
       }
 
@@ -131,6 +131,8 @@
       worksWithH3('add', 'description');
       //Exercicio 2.3
       removeElement('.main-content','left-content');
+      //Exercicio 2.4
+      document.getElementsByClassName('right-content')[0].style.marginRight = 'auto';
       
     </script>
   </body>
