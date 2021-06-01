@@ -8,8 +8,8 @@ function createDaysOfTheWeek() {
     dayListItem.innerHTML = days;
 
     weekDaysList.appendChild(dayListItem);
-  };
-};
+  }
+}
 
 function isHoliday(day) {
   if (day === 24 || day === 25 || day === 31) {
@@ -19,7 +19,6 @@ function isHoliday(day) {
 }
 
 function isFriday(day) {
-  const fridays = [4, 11, 18, 25];
   if (day === 4 || day === 11 || day === 18 || day === 25) {
     return true;
   }
@@ -47,7 +46,18 @@ function createDays() {
   }
 }
 
+function createButton(nameButton) {
+  const button = document.createElement('button');
+  const buttonsContainer = document.querySelector('.buttons-container');
+
+  button.id = 'btn-holiday';
+  button.innerHTML = nameButton;
+
+  buttonsContainer.appendChild(button);
+}
+
 createDaysOfTheWeek();
 createDays();
+createButton('Feriados');
 
 // Escreva seu código abaixo.
