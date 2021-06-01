@@ -48,11 +48,11 @@ function createDays() {
 }
 
 //exercicio 2
-function createButton(nameButton) {
+function createButton(nameButton, idButton) {
   const button = document.createElement('button');
   const buttonsContainer = document.querySelector('.buttons-container');
 
-  button.id = 'btn-holiday';
+  button.id = idButton;
   button.innerHTML = nameButton;
 
   buttonsContainer.appendChild(button);
@@ -75,7 +75,9 @@ function changeColorHolidays() {
 
 createDaysOfTheWeek();
 createDays();
-createButton('Feriados');
+createButton('Feriados', 'btn-holiday');
 document.getElementById('btn-holiday').addEventListener('click', changeColorHolidays);
+createButton('Sexta-feira', 'btn-friday');
+
 
 // Escreva seu código abaixo.
