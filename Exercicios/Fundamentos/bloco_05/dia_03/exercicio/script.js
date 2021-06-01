@@ -73,6 +73,7 @@ function changeColorHolidays() {
   }
 }
 
+//Exercicio 5
 function changeTextOfFriday() {
   const fridaysList = document.querySelectorAll('.friday');
   for (let index = 0; index < fridaysList.length; index += 1) {
@@ -85,11 +86,29 @@ function changeTextOfFriday() {
   }
 }
 
+function addZoom(element) {
+  element.target.style.fontSize = '23px';
+}
+function removeZoom(element) {
+  element.target.style.fontSize = '20px';
+}
+
+function zoom(nameClass) {
+  const daysList = document.querySelectorAll(nameClass);
+  for (let index = 0; index < daysList.length; index += 1) {
+    daysList[index].addEventListener('mouseover', addZoom);
+    daysList[index].addEventListener('mouseout', removeZoom);  
+  }
+}
+
 createDaysOfTheWeek();
 createDays();
 createButton('Feriados', 'btn-holiday');
 document.getElementById('btn-holiday').addEventListener('click', changeColorHolidays);
 createButton('Sexta-feira', 'btn-friday');
 document.getElementById('btn-friday').addEventListener('click', changeTextOfFriday);
+zoom('.day');
+
+
 
 // Escreva seu código abaixo.
