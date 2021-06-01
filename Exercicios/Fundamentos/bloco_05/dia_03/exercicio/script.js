@@ -47,7 +47,7 @@ function createDays() {
   }
 }
 
-//exercicio 2
+//exercicio 2 e 4
 function createButton(nameButton, idButton) {
   const button = document.createElement('button');
   const buttonsContainer = document.querySelector('.buttons-container');
@@ -73,11 +73,23 @@ function changeColorHolidays() {
   }
 }
 
+function changeTextOfFriday() {
+  const fridaysList = document.querySelectorAll('.friday');
+  for (let index = 0; index < fridaysList.length; index += 1) {
+    if (fridaysList[index].innerHTML === 'Hj é sexta') {
+      fridaysList[index].innerHTML = parseInt(fridaysList[index].previousSibling.innerHTML) + 1;
+    }
+    else{
+      fridaysList[index].innerHTML = 'Hj é sexta';
+    }
+  }
+}
+
 createDaysOfTheWeek();
 createDays();
 createButton('Feriados', 'btn-holiday');
 document.getElementById('btn-holiday').addEventListener('click', changeColorHolidays);
 createButton('Sexta-feira', 'btn-friday');
-
+document.getElementById('btn-friday').addEventListener('click', changeTextOfFriday);
 
 // Escreva seu código abaixo.
