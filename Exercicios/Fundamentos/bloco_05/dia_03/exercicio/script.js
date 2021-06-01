@@ -11,6 +11,7 @@ function createDaysOfTheWeek() {
   }
 }
 
+//exercicio 1
 function isHoliday(day) {
   if (day === 24 || day === 25 || day === 31) {
     return true;
@@ -46,6 +47,7 @@ function createDays() {
   }
 }
 
+//exercicio 2
 function createButton(nameButton) {
   const button = document.createElement('button');
   const buttonsContainer = document.querySelector('.buttons-container');
@@ -56,8 +58,24 @@ function createButton(nameButton) {
   buttonsContainer.appendChild(button);
 }
 
+//exercicio 3
+function changeColorHolidays() {
+  const holidaysList = document.querySelectorAll('.holiday');
+  for (let index = 0; index < holidaysList.length; index += 1) {
+    if (holidaysList[index].style.backgroundColor === 'green') {
+      holidaysList[index].style.backgroundColor = 'rgb(238,238,238)';
+      holidaysList[index].style.color = '#666';
+    }
+    else{
+      holidaysList[index].style.backgroundColor = 'green';
+      holidaysList[index].style.color = 'white';
+    }
+  }
+}
+
 createDaysOfTheWeek();
 createDays();
 createButton('Feriados');
+document.getElementById('btn-holiday').addEventListener('click', changeColorHolidays);
 
 // Escreva seu código abaixo.
