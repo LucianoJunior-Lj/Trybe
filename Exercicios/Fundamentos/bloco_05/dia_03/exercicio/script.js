@@ -86,9 +86,11 @@ function changeTextOfFriday() {
   }
 }
 
+//Exercicio 6
 function addZoom(element) {
   element.target.style.fontSize = '23px';
 }
+
 function removeZoom(element) {
   element.target.style.fontSize = '20px';
 }
@@ -101,6 +103,15 @@ function zoom(nameClass) {
   }
 }
 
+//Exercicio 7
+function changeText(element) {
+  const task = document.createElement('span');
+  task.innerHTML = element.target.value;
+  document.getElementById('btn-add').addEventListener('click', function () {
+    document.querySelector('.my-tasks').appendChild(task);
+  });
+}
+
 createDaysOfTheWeek();
 createDays();
 createButton('Feriados', 'btn-holiday');
@@ -108,7 +119,7 @@ document.getElementById('btn-holiday').addEventListener('click', changeColorHoli
 createButton('Sexta-feira', 'btn-friday');
 document.getElementById('btn-friday').addEventListener('click', changeTextOfFriday);
 zoom('.day');
-
+document.getElementById('task-input').addEventListener('change', changeText);
 
 
 // Escreva seu código abaixo.
