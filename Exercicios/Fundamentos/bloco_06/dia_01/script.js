@@ -10,6 +10,10 @@ function createStateOptions() {
   }
 }
 
+function (params) {
+  
+}
+
 window.onload = function () {
   createStateOptions();
   // let a = document.querySelector('select');
