@@ -62,3 +62,18 @@ console.log(getTotalNumberOfStudents(allLessons));
 //Exercício 7
 const getValueByNumber = (object, index) => Object.values(object)[index];
 console.log(getValueByNumber(lesson1, 0));
+
+//Exercício 8
+function verifyPair(object, key, value) {
+  const list = Object.entries(object);
+  for (const index in list) {
+    if (Object.hasOwnProperty.call(list, index)) {
+      if(list[index][0] === key && list[index][1] === value) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
