@@ -77,3 +77,17 @@ function verifyPair(object, key, value) {
 }
 console.log(verifyPair(lesson3, 'turno', 'noite'));
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+
+//Bonus 1
+function countStudents(object) {
+  let totalNumberOfStudents = 0;
+  for (const key in object) {
+    if (Object.hasOwnProperty.call(object, key)) {
+      if (object[key].materia === 'Matemática') {
+        totalNumberOfStudents += object[key].numeroEstudantes        
+      }
+    }
+  }
+  return totalNumberOfStudents;
+}
+console.log(countStudents(allLessons));
