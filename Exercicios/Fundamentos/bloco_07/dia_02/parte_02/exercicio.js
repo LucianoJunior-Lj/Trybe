@@ -46,3 +46,15 @@ showValues(lesson2);
 //Exercício 5
 const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
 console.log(allLessons);
+
+//Exercício 6
+function getTotalNumberOfStudents(object) {
+  let totalNumberOfStudents = 0;
+  for (const key in object) {
+    if (Object.hasOwnProperty.call(object, key)) {
+      totalNumberOfStudents += object[key].numeroEstudantes
+    }
+  }
+  return totalNumberOfStudents;
+}
+console.log(getTotalNumberOfStudents(allLessons));
