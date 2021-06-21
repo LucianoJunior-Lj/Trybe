@@ -30,3 +30,9 @@ function listKeys(object) {
   console.log(Object.keys(object));
 }
 listKeys(lesson1);
+
+//Exercício 3
+function showSize(object) { 
+  console.log(Object.keys(object).length);
+}
+showSize(lesson3);
