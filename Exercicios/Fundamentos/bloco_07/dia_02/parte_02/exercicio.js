@@ -36,3 +36,9 @@ function showSize(object) {
   console.log(Object.keys(object).length);
 }
 showSize(lesson3);
+
+//Exercício 4
+function showValues(object) { 
+  console.log(Object.values(object));
+}
+showValues(lesson2);
