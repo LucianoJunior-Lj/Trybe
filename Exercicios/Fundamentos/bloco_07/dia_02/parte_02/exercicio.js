@@ -24,3 +24,9 @@ function addTurno(object, key, value) {
 }
 addTurno(lesson2, 'turno', 'noite')
 console.log(lesson2);
+
+//Exercício 2
+function listKeys(object) {
+  console.log(Object.keys(object));
+}
+listKeys(lesson1);
