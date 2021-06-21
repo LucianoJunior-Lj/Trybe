@@ -91,3 +91,24 @@ function countStudents(object) {
   return totalNumberOfStudents;
 }
 console.log(countStudents(allLessons));
+
+//Bonus 2
+function createReport(object, teacher) {
+  const report = {
+    professor: teacher,
+    aulas: [],
+    estudantes: 0,
+  };
+
+  for (const key in object) {
+    if (Object.hasOwnProperty.call(object, key)) {
+      if (object[key].professor === teacher) {
+        report.aulas.push(object[key].materia);
+        report.estudantes += object[key].numeroEstudantes;
+      }
+    }
+  }
+  
+  return report;
+}
+console.log(createReport(allLessons, 'Maria Clara'))
