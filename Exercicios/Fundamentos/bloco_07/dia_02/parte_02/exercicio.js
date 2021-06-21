@@ -58,3 +58,7 @@ function getTotalNumberOfStudents(object) {
   return totalNumberOfStudents;
 }
 console.log(getTotalNumberOfStudents(allLessons));
+
+//Exercício 7
+const getValueByNumber = (object, index) => Object.values(object)[index];
+console.log(getValueByNumber(lesson1, 0));
