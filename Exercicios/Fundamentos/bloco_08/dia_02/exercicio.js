@@ -157,7 +157,16 @@ assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);
 expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
-  books.every((book) => book.author.birthYear > 1900 && book.author.birthYear <= 2000);
+  return books.every((book) => book.author.birthYear > 1900 && book.author.birthYear <= 2000);
 }
 
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
+
+//Exercicio 6
+expectedResult = true;
+
+function someBookWasReleaseOnThe80s() {
+  return books.some((book) => book.releaseYear > 1980 && book.releaseYear <= 1989);
+}
+
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
