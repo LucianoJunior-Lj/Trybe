@@ -170,3 +170,12 @@ function someBookWasReleaseOnThe80s() {
 }
 
 assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
+
+//Exercicio 7
+expectedResult = false;
+
+function authorUnique() {
+  return books.every((book) => books.some((book2) => book2.author.birthYear === book.author.birthYear && book2.id !== book.id));
+}
+
+assert.strictEqual(authorUnique(), expectedResult);
