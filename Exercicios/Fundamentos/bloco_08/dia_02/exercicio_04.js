@@ -63,46 +63,7 @@ const books = [
   },
 ];
 
-//Exercicio 1
-function authorBornIn1947() {
-  return books.find((book) => book.author.birthYear === 1947).author.name;
-}
-
-assert.strictEqual(authorBornIn1947(), 'Stephen King');
-
-//Exercicio 2
-function smallerName() {
-  let nameBook;
-  books.forEach((book) => {
-    if (!nameBook || book.name.length < nameBook.length) {
-      nameBook = book.name;
-    }
-  });
-  return nameBook;
-}
-
-assert.strictEqual(smallerName(), 'Duna');
-
-//Exercicio 3
-let expectedResult = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin',
-  },
-  genre: 'Fantasia',
-  id: 1,
-  name: 'As Crônicas de Gelo e Fogo',
-  releaseYear: 1991,
-};
-
-function getNamedBook() {
-  return books.find((book) => book.name.length === 26);
-}
-
-assert.deepStrictEqual(getNamedBook(), expectedResult);
-
-//Exercicio 4
-expectedResult = [
+const expectedResult = [
   {
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
@@ -152,30 +113,3 @@ function booksOrderedByReleaseYearDesc() {
 }
 
 assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);
-
-//Exercicio 5
-expectedResult = false;
-
-function everyoneWasBornOnSecXX() {
-  return books.every((book) => book.author.birthYear > 1900 && book.author.birthYear <= 2000);
-}
-
-assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
-
-//Exercicio 6
-expectedResult = true;
-
-function someBookWasReleaseOnThe80s() {
-  return books.some((book) => book.releaseYear > 1980 && book.releaseYear <= 1989);
-}
-
-assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
-
-//Exercicio 7
-expectedResult = false;
-
-function authorUnique() {
-  return books.every((book) => books.some((book2) => book2.author.birthYear === book.author.birthYear && book2.id !== book.id));
-}
-
-assert.strictEqual(authorUnique(), expectedResult);
