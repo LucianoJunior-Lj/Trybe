@@ -160,6 +160,7 @@ function changeColorOfTheDay(element) {
   }
 }
 
+//Exercicio Bonus
 function eventTaskInput(event) {
   if (event.keyCode === 13) {
 		buttonAdd.click();
