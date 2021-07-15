@@ -124,14 +124,31 @@ function createTask(taskName) {
 
 //Exercicio 8
 function createLegend(color) {
-  const task = document.createElement('div');
-  task.className = 'task';
-  task.style.backgroundColor = color;
-  myTasks.appendChild(task);
+  const legend = document.createElement('div');
+  legend.className = 'task';
+  legend.style.backgroundColor = color;
+  addEventTheLegend(legend);
+  myTasks.appendChild(legend);
+}
+
+//Exercicio 9
+function addEventTheLegend(legend) {
+  legend.addEventListener('click', function (event) {
+    if (event.target.className === 'task') {
+      const previousElement = document.querySelector('.selected');
+      if (previousElement) {
+        previousElement.className = 'task';
+      }
+      event.target.className = 'task selected';
+    }
+    else{
+      event.target.className = 'task';
+    }
+  })
 }
 
 function eventTaskInput(event) {
-  if (event.target.keyCode === 13) {
+  if (event.keyCode === 13) {
 		buttonAdd.click();
 	}
 }
