@@ -1,3 +1,7 @@
+const myTasks = document.querySelector('.my-tasks');
+const taskInput = document.getElementById('task-input');
+const buttonAdd = document.getElementById('btn-add');
+
 function createDaysOfTheWeek() {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
   const weekDaysList = document.querySelector('.week-days');
@@ -104,12 +108,42 @@ function zoom(nameClass) {
 }
 
 //Exercicio 7
-function changeText(element) {
+function randomRgbColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function createTask(taskName) {
   const task = document.createElement('span');
-  task.innerHTML = element.target.value;
-  document.getElementById('btn-add').addEventListener('click', function () {
-    document.querySelector('.my-tasks').appendChild(task);
-  });
+  task.innerHTML = taskName + '<br>';
+  createLegend(randomRgbColor());
+  myTasks.appendChild(task);
+}
+
+//Exercicio 8
+function createLegend(color) {
+  const task = document.createElement('div');
+  task.className = 'task';
+  task.style.backgroundColor = color;
+  myTasks.appendChild(task);
+}
+
+function eventTaskInput(event) {
+  if (event.target.keyCode === 13) {
+		buttonAdd.click();
+	}
+}
+
+function eventButtonAdd() {
+  const text = taskInput.value;
+	if (text.length > 0) {
+		createTask(text);
+		taskInput.value = '';
+	} else {
+		alert('O nome da tarefa não pode ser vazio!');
+	}
 }
 
 createDaysOfTheWeek();
@@ -119,4 +153,5 @@ document.getElementById('btn-holiday').addEventListener('click', changeColorHoli
 createButton('Sexta-feira', 'btn-friday');
 document.getElementById('btn-friday').addEventListener('click', changeTextOfFriday);
 zoom('.day');
-document.getElementById('task-input').addEventListener('change', changeText);
+taskInput.addEventListener('keyup', eventTaskInput);
+buttonAdd.addEventListener('click', eventButtonAdd);
