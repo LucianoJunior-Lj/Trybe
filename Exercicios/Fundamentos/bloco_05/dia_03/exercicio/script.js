@@ -135,16 +135,29 @@ function createLegend(color) {
 function addEventTheLegend(legend) {
   legend.addEventListener('click', function (event) {
     if (event.target.className === 'task') {
-      const previousElement = document.querySelector('.selected');
+      const previousElement = document.querySelector('.task-selected');
       if (previousElement) {
         previousElement.className = 'task';
       }
-      event.target.className = 'task selected';
+      event.target.className = 'task-selected';
     }
     else{
       event.target.className = 'task';
     }
   })
+}
+
+//Exercicio 10
+function changeColorOfTheDay(element) {
+  if (element.target && element.target.nodeName === 'LI') {
+    const color = document.querySelector('.task-selected').style.backgroundColor;
+    const day = element.target;
+    if (day.style.color === color) {
+      day.style.color = 'rgb(119,119,119)';
+    } else {
+      day.style.color = color;
+    }
+  }
 }
 
 function eventTaskInput(event) {
@@ -172,3 +185,4 @@ document.getElementById('btn-friday').addEventListener('click', changeTextOfFrid
 zoom('.day');
 taskInput.addEventListener('keyup', eventTaskInput);
 buttonAdd.addEventListener('click', eventButtonAdd);
+document.getElementById('days').addEventListener('click', changeColorOfTheDay);
