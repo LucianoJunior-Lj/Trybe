@@ -120,6 +120,3 @@ createButton('Sexta-feira', 'btn-friday');
 document.getElementById('btn-friday').addEventListener('click', changeTextOfFriday);
 zoom('.day');
 document.getElementById('task-input').addEventListener('change', changeText);
-
-
-// Escreva seu código abaixo.
