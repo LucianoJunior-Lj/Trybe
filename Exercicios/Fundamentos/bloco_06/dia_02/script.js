@@ -1,3 +1,5 @@
+import './node_modules/just-validate/dist/js/just-validate.js';
+
 function createStateOptions() {
   let states = document.getElementById('state');
   let stateOptions = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
@@ -24,7 +26,62 @@ function createStartDate() {
   });  
 }
 
+function configureJustValidation() {
+  console.log('entrou');
+  new window.JustValidate('.js-form', {
+    rules: {
+      name: {
+        required: true,
+        minLength: 4,
+        maxLength: 40,
+      },
+      email: {
+        required: true,
+        email: true,
+        maxLength: 50,
+      },
+      cpf: {
+        required: true,
+        maxLength: 11,
+      },
+      address:{
+        required: true,
+        maxLength: 200,
+      },
+      city:{
+        required: true,
+        maxLength: 28,
+      },
+      state:{
+        required: true,
+      },
+      house:{
+        required: true,
+      },
+      resume:{
+        required: true,
+        maxLength: 1000,
+      },
+      role:{
+        required: true,
+        maxLength: 40,
+      },
+      description:{
+        required: true,
+        maxLength: 500,
+      },
+      date:{
+        required: true,
+      },
+    },
+    submitHandler: function (form, values) {
+      console.log(form, values);
+    },
+  });
+}
+
 window.onload = function () {
   createStateOptions();
   createStartDate();
+  configureJustValidation();
 }
