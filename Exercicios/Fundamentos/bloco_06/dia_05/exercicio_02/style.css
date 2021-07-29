@@ -1,0 +1,80 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+  background-color: black;
+  color: white  ;
+  padding: 1%;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 7%;
+}
+
+li {
+  list-style: none;
+}
+
+.asides{
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  padding: 1% 10%;
+}
+
+article {
+  margin: 0 5%;
+}
+
+footer {
+  background-color: gray;
+  padding: 3% 7%;
+  width: 100%;
+}
+
+footer h3 {
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1.3em;
+  }
+  .asides {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .asides h2 {
+    text-align: center;
+  }
+
+  footer {
+    padding-top: 1%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .asides{
+    padding: 0 20%;
+  }
+
+  article {
+    margin: auto;
+    max-width: 60%;
+  }
+
+  footer {
+    padding: 7px 20%;
+  }
+}

@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-size: 1.1em;
+  margin: 5% 7%;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: rgb(216, 216, 216);
+    font-size: 1.3em;
+    margin: 20px 40px;
+
+  }
+
+  figure {
+    float: left;
+    margin: 2%;
+    width: 43%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: rgb(121, 121, 121);
+    color: white;
+    font-size: 1.5em;
+    margin: 40px 70px;
+    max-width: 1300px;
+
+  }
+
+  figure {
+    float: left;
+    margin: 10px;
+    width: 46%;
+  }
+
+  h1, h2 {
+    margin: 20px 0;
+  }
+}
