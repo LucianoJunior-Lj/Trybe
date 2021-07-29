@@ -63,3 +63,18 @@ footer h3 {
     padding-top: 1%;
   }
 }
+
+@media screen and (min-width: 1000px) {
+  .asides{
+    padding: 0 20%;
+  }
+
+  article {
+    margin: auto;
+    max-width: 60%;
+  }
+
+  footer {
+    padding: 7px 20%;
+  }
+}
