@@ -46,3 +46,20 @@ footer {
 footer h3 {
   text-align: center;
 }
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1.3em;
+  }
+  .asides {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .asides h2 {
+    text-align: center;
+  }
+
+  footer {
+    padding-top: 1%;
+  }
+}
