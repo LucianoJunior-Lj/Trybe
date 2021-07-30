@@ -7,7 +7,7 @@ function fetchPromise() {
     (sum > 8000) ? resolve(sum) : reject();    
   })
     .then((sum) => console.log([2, 3, 5, 10].map(number => sum / number)))
-    .catch(() => console.log('Promise rejeitada'));
+    .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
 }
 
 fetchPromise();
