@@ -4,9 +4,9 @@ function fetchPromise() {
       Math.pow((Math.floor(Math.random() * 50) + 1), 2)
     ));
     const sum = array.reduce((accumulator, current) => accumulator + current);
-    (sum > 8000) ? resolve() : reject();    
+    (sum > 8000) ? resolve(sum) : reject();    
   })
-    .then(() => console.log('Promise resolvida'))
+    .then((sum) => console.log([2, 3, 5, 10].map(number => sum / number)))
     .catch(() => console.log('Promise rejeitada'));
 }
 
