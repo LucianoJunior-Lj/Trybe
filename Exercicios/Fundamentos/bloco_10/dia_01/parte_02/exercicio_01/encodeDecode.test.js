@@ -2,7 +2,7 @@ const { encode, decode } = require('./encodeDecode');
 
 describe('testing encode function', () => {
   it('should be a function', () => {
-    expect(encode).toBeDefined();
+    expect(typeof encode).toBe('function');
   });
 
   it('should return number-coded vowels', () => {
@@ -24,7 +24,7 @@ describe('testing encode function', () => {
 
 describe('testing decode function', () => {
   it('should be a function', () => {
-    expect(decode).toBeDefined();
+    expect(typeof decode).toBe('function');
   });
 
   it('should return the decoded numbers', () => {
