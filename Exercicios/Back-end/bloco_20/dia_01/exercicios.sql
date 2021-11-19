@@ -5,7 +5,7 @@ SELECT MAX(SALARY) FROM hr.employees;
 SELECT MAX(SALARY) - MIN(SALARY) FROM hr.employees;
 
 -- 3. Escreva uma query que exiba a média salarial de cada JOB_ID , ordenando pela média salarial em ordem decrescente.
-SELECT JOB_ID, AVG(SALARY) AS 'AVERAGE_SALARY' FROM hr.employees
+SELECT JOB_ID, AVG(SALARY) AS AVERAGE_SALARY FROM hr.employees
 GROUP BY JOB_ID
 ORDER BY AVERAGE_SALARY DESC;
 
@@ -13,19 +13,20 @@ ORDER BY AVERAGE_SALARY DESC;
 SELECT SUM(SALARY) FROM hr.employees;
 
 -- 5. Escreva uma query que exiba quatro informações: o maior salário, o menor salário, a soma de todos os salários e a média dos salários. Todos os valores devem ser formatados para ter apenas duas casas decimais.
-SELECT MAX(SALARY) AS `highest_salary`,
-	     MIN(SALARY) AS `lowest_salary`,
-       SUM(SALARY) AS `sum_of_salaries`,
-       ROUND(AVG(SALARY), 2) AS `avarage_salary`
+SELECT MAX(SALARY) AS highest_salary,
+	     MIN(SALARY) AS lowest_salary,
+       SUM(SALARY) AS sum_of_salaries,
+       ROUND(AVG(SALARY), 2) AS avarage_salary
 FROM hr.employees;
 
 
 -- 6. Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras ( IT_PROG ).
-SELECT JOB_ID , COUNT(*) AS 'total' FROM hr.employees
-WHERE JOB_ID = "IT_PROG";
+SELECT JOB_ID , COUNT(*) AS total FROM hr.employees
+WHERE JOB_ID = 'IT_PROG';
 
 -- 7. Escreva uma query que exiba a quantidade de dinheiro necessária para efetuar o pagamento de cada profissão ( JOB_ID ).
-
+SELECT JOB_ID, SUM(SALARY) AS total_salary FROM hr.employees
+GROUP BY JOB_ID;
 
 -- 8. Utilizando a query anterior, faça as alterações para que seja exibido somente a quantidade de dinheiro necessária para cobrir a folha de pagamento das pessoas programadoras ( IT_PROG ).
 
