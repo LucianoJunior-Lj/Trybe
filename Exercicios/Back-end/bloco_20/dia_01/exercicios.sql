@@ -40,7 +40,12 @@ HAVING NOT JOB_ID = 'IT_PROG'
 ORDER BY total_salary DESC;
 
 -- 10. Escreva um query que exiba média salarial e o número de funcionários de todos os departamentos com mais de dez funcionários. Dica: agrupe pelo department_id .
-
+SELECT DEPARTMENT_ID, 
+	   ROUND(AVG(SALARY), 2) AS total_salary ,
+	   COUNT(DEPARTMENT_ID) AS total_employees
+FROM hr.employees
+GROUP BY DEPARTMENT_ID
+HAVING total_employees > 10;
 
 -- 11. Escreva uma query que atualize a coluna PHONE_NUMBER , de modo que todos os telefones iniciados por 515 agora devem iniciar com 777 .
 
