@@ -13,6 +13,11 @@ ORDER BY AVERAGE_SALARY DESC;
 SELECT SUM(SALARY) FROM hr.employees;
 
 -- 5. Escreva uma query que exiba quatro informações: o maior salário, o menor salário, a soma de todos os salários e a média dos salários. Todos os valores devem ser formatados para ter apenas duas casas decimais.
+SELECT MAX(SALARY) AS `highest_salary`,
+	     MIN(SALARY) AS `lowest_salary`,
+       SUM(SALARY) AS `sum_of_salaries`,
+       ROUND(AVG(SALARY), 2) AS `avarage_salary`
+FROM hr.employees;
 
 
 -- 6. Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras ( IT_PROG ).
