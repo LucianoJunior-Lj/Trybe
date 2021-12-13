@@ -36,6 +36,16 @@ LEFT JOIN Pixar.Movies AS movies ON theater.id = movies.theater_id
 ORDER BY theater.`name`;
 
 -- Exercício 5: Utilizando o RIGHT JOIN , faça uma busca que retorne todos os dados dos filmes, mesmo os que não estão em cartaz e, adicionalmente, os dados dos cinemas que possuem estes filmes em cartaz. Retorne os nomes dos cinemas em ordem alfabética.
+SELECT
+  theater.`name`,
+  theater.location,
+  movies.title,
+  movies.director,
+  movies.`year`,
+  movies.length_minutes
+FROM Pixar.Theater AS theater
+RIGHT JOIN Pixar.Movies AS movies ON theater.id = movies.theater_id
+ORDER BY theater.`name`;
 
 -- Exercício 6: Faça duas buscas, uma utilizando SUBQUERY e outra utilizando INNER JOIN , que retornem os títulos dos filmes que possuem avaliação maior que 7.5.
 
