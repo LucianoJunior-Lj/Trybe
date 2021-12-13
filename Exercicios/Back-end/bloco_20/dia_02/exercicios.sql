@@ -48,17 +48,13 @@ RIGHT JOIN Pixar.Movies AS movies ON theater.id = movies.theater_id
 ORDER BY theater.`name`;
 
 -- Exercício 6: Faça duas buscas, uma utilizando SUBQUERY e outra utilizando INNER JOIN , que retornem os títulos dos filmes que possuem avaliação maior que 7.5.
-SELECT
-  title
-FROM Pixar.Movies
+SELECT title FROM Pixar.Movies
 WHERE id IN (
   SELECT movie_id FROM Pixar.BoxOffice
   WHERE rating > 7.5
 );
 
-SELECT
-  movies.title,
-FROM Pixar.Movies AS movies
+SELECT movies.title FROM Pixar.Movies AS movies
 INNER JOIN Pixar.BoxOffice AS boxOffice ON movies.id = boxOffice.movie_id
 WHERE boxOffice.rating > 7.5;
 
