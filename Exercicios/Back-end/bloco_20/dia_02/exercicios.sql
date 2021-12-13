@@ -102,5 +102,13 @@ INNER JOIN Pixar.Theater AS theater ON movies.theater_id = theater.id
 WHERE boxOffice.rating > 8
 
 -- Exercício 11: Utilizando o SELF JOIN , selecione os títulos e duração dos filmes que possuem o mesmo diretor.
+SELECT 
+  movies1.title,
+  movies1.length_minutes,
+  movies2.title,
+  movies2.length_minutes
+FROM Pixar.Movies AS movies1, Pixar.Movies AS movies2
+WHERE movies1.director = movies2.director
+AND movies1.title <> movies2.title;
 
 -- Exercício 12: Faça duas buscas, uma utilizando SUBQUERY e outra utilizando INNER JOIN , que retornem o título dos filmes que arrecadaram 500 milhões ou mais, e que possuem duração maior que 110 minutos.
