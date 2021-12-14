@@ -35,4 +35,15 @@ END $$
 DELIMITER ;
 
 -- Exercício 3 - Monte uma procedure que receba o email de um cliente como parâmetro de entrada e diga se o cliente está ou não ativo, através de um parâmetro de saída.
+USE sakila;
+DELIMITER $$
+
+CREATE PROCEDURE CheckIfCustomerIsActive(IN searchedCustomer VARCHAR(50), OUT isActive BOOLEAN)
+BEGIN
+  SELECT `active` FROM customer 
+  WHERE email = searchedCustomer
+  INTO isActive;
+END $$
+
+DELIMITER ;
 
