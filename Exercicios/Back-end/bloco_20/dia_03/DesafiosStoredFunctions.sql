@@ -32,4 +32,18 @@ END $$
 DELIMITER ;
 
 -- Exercício 3 - Crie uma function que receba uma determinada categoria de filme em formato de texto (ex: 'Action' , 'Horror' ) e retorna a quantidade total de filmes registrados nessa categoria.
+USE sakila;
+DELIMITER $$
 
+CREATE FUNCTION SumAmountOfMoviesByCategory(searchedCategoryName VARCHAR(20))
+RETURNS VARCHAR(20) READS SQL DATA
+BEGIN
+  DECLARE amountFilms VARCHAR(20);
+  SELECT COUNT(*) FROM film_category
+  INNER JOIN category ON category.category_id = film_category.category_id
+  WHERE category.`name` = searchedCategoryName
+  INTO amountFilms;
+  RETURN amountFilms;
+END $$
+
+DELIMITER ;
