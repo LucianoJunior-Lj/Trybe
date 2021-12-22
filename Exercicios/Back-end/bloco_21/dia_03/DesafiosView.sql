@@ -19,7 +19,17 @@ CREATE VIEW film_info AS
   INNER JOIN sakila.film_actor AS filmActor ON actor.actor_id = filmActor.actor_id
   INNER JOIN sakila.film AS film ON film.film_id = filmActor.film_id
   ORDER BY `actor`;
-  
+
 -- Exercício 3 - Crie uma view chamada address_info que faça uso das tabelas address e city do banco de dados sakila . Sua view deve exibir o address_id , o address , o district , o city_id e a city . Os resultados devem ser ordenados pelo nome das cidades. Use a imagem abaixo como referência.
+CREATE VIEW address_info AS
+  SELECT
+    address.address_id,
+    address.address,
+    address.district,
+    city.city_id,
+    city.city
+  FROM sakila.address AS address
+  INNER JOIN sakila.city AS city ON address.city_id = city.city_id
+  ORDER BY city.city;
 
 -- Exercício 4 - Crie uma view chamada movies_languages , usando as tabelas film e language do banco de dados sakila . Sua view deve exibir o título do filme , o id do idioma e o idioma do filme , como na imagem a seguir.
